@@ -1,0 +1,20 @@
+<table class="table table-bordered text-center">
+    <thead>
+        <th><strong>Last Updated</strong></th>
+        <th><strong>State Name</strong></th>
+        <th><strong>Confirmed</strong></th>
+        <th><strong>Recovered</strong></th>
+        <th><strong>Tested</strong></th>
+    </thead>
+    <tbody>
+       <ng-container *ngFor="let state of nationalData; let i=index">
+        <tr>
+            <td>{{state.meta.last_updated}}</td>
+            <td>{{stateNames[i]}}</td>
+            <td>{{state.total.confirmed}}</td>
+            <td>{{state.total.recovered}}</td>
+            <td>{{state.total.tested}}</td>
+        </tr>
+       </ng-container>
+    </tbody>
+</table>

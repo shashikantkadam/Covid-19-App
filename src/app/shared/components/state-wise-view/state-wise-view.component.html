@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <ul >
+                <div class="card" *ngFor="let cd of stateNames; index as i">
+                    <div class="card-header">
+                        <li (click)="onStateNameClick(i)">{{cd}}</li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="col-sm-8">
+            <table class="table table-bordered">
+                <thead>
+                    <th>
+                        <strong>District</strong>
+                    </th>
+                    <th><strong>Confirmed</strong></th>
+                    <th><strong>Recovered</strong></th>
+                    <th><strong>Deaths</strong></th>
+                    <th><strong>Last Updated</strong></th>
+                    
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cd of getData" >
+                        <td >
+                            {{cd.districtName}}
+                        </td>
+                        <td>{{cd.totalCount}}</td>
+                        <td>{{cd.recovered}}</td>
+                        <td>{{cd.deaths}}</td>
+                        <td>{{cd.tested}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

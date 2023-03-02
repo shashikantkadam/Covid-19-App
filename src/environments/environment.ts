@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  covidBaseUrl: "https://data.incovid19.org/v4/min/data.min.json"
 };
 
 /*
